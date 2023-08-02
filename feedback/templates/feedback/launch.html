@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to the Feedback System</title>
+    <link rel="stylesheet" href="{% static 'css/launch.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>University Feedback Collection System</h1>
+        <h3>Welcome</h3>
+        <p>This system allows students to provide feedback about course units, lecturers, and facilities during the semester.</p>
+        <p>The feedback you provide will help:</p>
+        <div class="container2"> 
+            <ul>
+                <li>Improve the Quality Of services Offered.</li>
+                <li>Lecturers make better teaching and content delivery decisions.</li>
+                <li>Outline Areas where Improvement is needed.</li>
+                <li>Quality Of services Offered.</li>
+            </ul>
+        </div>
+        
+        <p>Your opinion matters a great deal</p>
+        <div>
+            <p>Please Click below to login or register</p>
+        
+            <ul>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

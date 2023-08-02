@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Your Feedbacks</h2>
+  <a href="{% url 'feedback_form' %}"><button>Click to Add Feedback</button></a>
+  {% for feedback in feedback_submissions %}
+    <div class="container">
+      <a href="{% url 'edit_feedback' feedback.id %}">Edit</a>
+      <span><a href="{% url 'delete_feedback' feedback.id %}">Delete</a></span>
+      <h3>Feedback #{{ forloop.counter }}</h3>
+      <p>Course Unit: {{ feedback.course_unit_name }}</p>
+      <p>Course Code: {{ feedback.course_code }}</p>
+      <p>Facility: {{ feedback.facility_name }}</p>
+      <p>Facility Rating: {{ feedback.facility_rating }}</p>
+      <p>Facility Comments: {{ feedback.facility_comments }}</p>
+      <p>Lecturer Name: {{ feedback.lecturer_name }}</p>
+      <p>Lecturer Rating: {{ feedback.lecturer_rating }}</p>
+      <p>Lecturer Comments: {{ feedback.lecturer_comments }}</p>
+      <p>Suggestions for Improvement: {{ feedback.suggestions }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
