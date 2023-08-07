@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* Use the relative path to the image in your project */
+    background-image: url("../images/im12.jpg");
+    /* Set background size, position, and repeat if needed */
+    background-size: cover; /* cover the entire background */
+    background-position: center; /* center the background */
+    background-repeat: no-repeat; /* do not repeat the background */
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 50px;
+    margin: 20px 0;
+    color:rgb(33, 3, 254);
+  }
+  
+  h3 {
+    font-size: 30px;
+    color:#bbf903;
+  }
+  
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .container2 {
+    margin-top: 20px;
+  }
+  
+  .container2 ul {
+    list-style-type: square;
+    margin-left: 40px;
+  }
+  
+  .container2 li {
+    font-size: 25px;
+    margin: 5px 0;
+    color:#0388fc;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4104f6;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  ul li a:hover {
+    background-color: #ff0464;
+  }
+  
+  
