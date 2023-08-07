@@ -1,11 +1,17 @@
 {% extends "base.html" %}
-
+{%load static%}
 {% block content %}
-    <h2>Delete Feedback</h2>
-    <p>Are you sure you want to delete the feedback?</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Delete</button>
-        <a href="{{ request.META.HTTP_REFERER }}">Cancel</a>
-    </form>
+    <div class="container">
+        <div class="content">
+            <h2>Delete Feedback</h2>
+            <p>Are you sure you want to delete the feedback?</p>
+            <form method="post" id="delete-form">
+                {% csrf_token %}
+                <button type="submit" class="delete-btn">Delete</button>
+                <a href="{{ request.META.HTTP_REFERER }}" class="cancel-link">Cancel</a>
+            </form>
+        </div>
+    </div>
+    <link rel="stylesheet" href="{% static 'css/del.css' %}">
+    
 {% endblock %}
