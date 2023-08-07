@@ -1,13 +1,8 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from .forms import StudentRegistrationForm, StudentLoginForm, FeedbackForm
-from .models import College, School, Department, Course, Student, Feedback
+from .models import Student, Feedback
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Feedback
-
 
 
 def launch_view(request):
@@ -62,40 +57,7 @@ def feedback_form_view(request):
                     # Save the feedback form data associated with the logged-in student
                     feedback = form.save(commit=False)
                     feedback.student = student
-
-                    # Fetch the selected choices from the session
-                    college_id = request.session.get('college_id')
-                    school_id = request.session.get('school_id')
-                    department_id = request.session.get('department_id')
-                    course_id = request.session.get('course_id')
-
-                    try:
-                        college = College.objects.get(id=college_id)
-                    except College.DoesNotExist:
-                        college = None
-
-                    try:
-                        school = School.objects.get(id=school_id)
-                    except School.DoesNotExist:
-                        school = None
-
-                    try:
-                        department = Department.objects.get(id=department_id)
-                    except Department.DoesNotExist:
-                        department = None
-
-                    try:
-                        course = Course.objects.get(id=course_id)
-                    except Course.DoesNotExist:
-                        course = None
-
-                    # Set the related fields in the feedback object
-                    feedback.college = college
-                    feedback.school = school
-                    feedback.department = department
-                    feedback.course = course
-
-                    # Save the feedback object
+                
                     feedback.save()
 
                     return redirect('display_content')
