@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    color:#8e1a1a;
+    font-size:30px;
+
+  }
+  
+  form {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #0bc5f4;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .success {
+    background-color: #99ff99;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  button:hover{
+    background-color: #6d08e9;
+  }
+  

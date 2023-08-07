@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{%load static %}
 {% block content %}
   <h2>Provide Feedback</h2>
   <form method="post">
@@ -7,4 +7,13 @@
     {{ form.as_p }}
     <button type="submit">Submit Feedback</button>
   </form>
+
+  {% if success %}
+    <div class="success">
+      <p>Your feedback has been successfully submitted.</p>
+    </div>
+  {% endif %}
+
+  <link rel="stylesheet" href="{% static 'css/feedback_and_edit.css' %}">
+  <script src="{% static 'js/feedback_and_ed.js' %}"></script>
 {% endblock %}
