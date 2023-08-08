@@ -19,7 +19,7 @@ Follow these steps to set up the University Feedback System locally for developm
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/university-feedback-system.git
+   git clone https://github.com/JosephMutyaba/Group_I_Recess.git
 
 2. Navigate to the project directory:
    ```bash
