@@ -1,0 +1,18 @@
+
+.messages {
+    list-style-type: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-items: center;
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  .error {
+    color: red;
+  }
