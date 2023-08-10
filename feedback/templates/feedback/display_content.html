@@ -3,6 +3,18 @@
 
 
 {% block content %}
+
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+
+
   <h2>Your Feedbacks</h2>
   <a href="{% url 'feedback_form' %}"><button>Click to Add Feedback</button></a>
   <div class="grid-container">
@@ -25,4 +37,6 @@
   </div>
 
   <link rel="stylesheet" href="{% static 'css/display.css' %}">
+  <link rel="stylesheet" href="{% static 'css/messages.css' %}">
+  <script src="{% static 'js/messages_script.js' %}"></script>
 {% endblock %}
