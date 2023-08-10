@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+    
     <div class="container">
         <h2>Login</h2>
         <form method="post">
@@ -12,5 +13,16 @@
         <p>Have no account? Please <a href="{% url 'register' %}">register</a></p>
         <p><a href="{% url 'launch' %}">Back to Home</a></p>
     </div>
+
+    {% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
     <link rel="stylesheet" href="{% static 'css/loin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/messages.css' %}">
+    <script src="{% static 'js/messages_script.js' %}"></script>
 {% endblock %}

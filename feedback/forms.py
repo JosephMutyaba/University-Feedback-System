@@ -2,9 +2,6 @@ from django import forms
 from .models import College, School, Department, Course, Feedback, Student
    
      
-from django import forms
-from .models import Student, College, School, Department, Course
-
 class StudentRegistrationForm(forms.ModelForm):
     class Meta:
         model = Student
