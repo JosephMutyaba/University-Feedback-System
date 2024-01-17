@@ -1,6 +1,3 @@
-# Feedback Collection System in Django 
-## Group_I_Recess
-
 # University Feedback System
 
 The University Feedback System is a Django-based web application designed to collect feedback from university students about their experiences with lecturers, university facilities, and courses taught during a semester. This system aims to enhance communication between students and the university administration and help improve the overall learning environment.
